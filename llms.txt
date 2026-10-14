@@ -1,0 +1,22 @@
+# Larfly
+
+> A Larfly é uma plataforma brasileira de atendimento com IA no WhatsApp para imobiliárias, corretores autônomos e anfitriões de temporada. A IA responde cada lead em segundos, 24 horas por dia, com a voz e as regras definidas pela empresa, e o corretor assume a conversa quando quiser.
+
+Pontos-chave: a IA conecta ao WhatsApp que a imobiliária já usa (sem número ou app novo para o cliente), nunca inicia conversa (só responde quem escreveu primeiro, sem spam) e consulta o catálogo de imóveis e a agenda de disponibilidade para responder preço, características e disponibilidade.
+
+## Páginas principais
+- [Início](https://larfly.com/): visão geral, recursos, planos e perguntas frequentes
+- [Planos e preços](https://larfly.com/pricing): plano gratuito (R$ 0), Pro (R$ 97/mês) e plano multiempresa (R$ 199,99/mês)
+- [Blog](https://larfly.com/blog): artigos sobre atendimento imobiliário, IA e WhatsApp
+- [Política de Privacidade](https://larfly.com/privacy-policy)
+- [Termos e Condições](https://larfly.com/terms-conditions)
+
+## Artigos
+- [Como responder leads de imóveis em segundos, 24h por dia](https://larfly.com/blog/maximizing-your-rental-property-s-potential)
+- [Como calibrar a voz da IA para a sua marca](https://larfly.com/blog/building-a-navigation-component)
+- [LGPD no WhatsApp: o que toda imobiliária precisa saber](https://larfly.com/blog/how-can-designers-prepare-for-the-future)
+- [Erros comuns que fazem sua imobiliária perder leads no WhatsApp](https://larfly.com/blog/top-tips-for-effective-tenant-management)
+- [O futuro do atendimento imobiliário é por IA no WhatsApp](https://larfly.com/blog/the-future-of-real-estate-management)
+
+## Mais detalhes
+- [Versão completa em texto](https://larfly.com/llms-full.txt)

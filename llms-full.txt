@@ -1,0 +1,38 @@
+# Larfly – informações completas
+
+A Larfly é uma plataforma brasileira de atendimento com IA no WhatsApp para o mercado imobiliário. Site: https://larfly.com — idioma: português do Brasil. Aplicativo: https://app.larfly.com
+
+## O que é e para quem é
+A Larfly conecta ao WhatsApp da imobiliária e responde cada lead em segundos, com a voz e as regras que a empresa define. O corretor só entra na conversa quando quiser. É indicada para imobiliárias, corretores autônomos e anfitriões de aluguel de temporada (incluindo Airbnb).
+
+## Como funciona
+- A IA responde primeiro: dúvidas sobre imóveis, preço e disponibilidade, a qualquer hora (atendimento 24 horas).
+- Usa o WhatsApp que a imobiliária já tem; o cliente não precisa de número ou aplicativo novo.
+- A IA nunca inicia conversa nem faz prospecção ou divulgação em massa: responde apenas quem escreveu primeiro, preservando a reputação do número.
+- Fala como a marca: é possível calibrar formalidade, uso de emoji, tamanho das respostas e se a IA se apresenta como IA.
+- O corretor pode assumir a conversa quando quiser.
+
+## Recursos
+- Atendimento com IA: responde dúvidas sobre imóveis, preço e disponibilidade na hora, com a voz da marca.
+- Catálogo de imóveis: cadastro de imóveis para venda, locação e temporada, com fotos, preço e status — tudo que a IA consulta para responder.
+- Central de conversas: inbox único com filtros por não lidas, com IA, com humano, aguardando ou encerradas.
+- Agenda de disponibilidade: calendário visual por imóvel, com bloqueios, reservas e dias de troca sincronizados automaticamente.
+- Sincronização com Airbnb (plano Pro).
+- Times e permissões, suporte prioritário (plano Pro).
+- Multiempresa, contatos protegidos (LGPD) e automações customizadas (plano multiempresa).
+
+## Planos e preços (em reais, por mês)
+- Gratuito — R$ 0/mês, para sempre e sem cartão: atendimento com IA, central de conversas, catálogo de até 5 imóveis, agenda básica.
+- Pro — R$ 97,00/mês, para imobiliárias em crescimento: atendimento com IA completo, catálogo ilimitado, sincronização com Airbnb, times e permissões, suporte prioritário.
+- Multiempresa — R$ 199,99/mês, para operações maiores: tudo do plano Pro, multiempresa, contatos protegidos (LGPD), automações customizadas.
+Preços e condições podem mudar; consulte https://larfly.com/pricing.
+
+## Artigos do blog
+- Como responder leads de imóveis em segundos, 24h por dia (12/01/2026) — https://larfly.com/blog/maximizing-your-rental-property-s-potential
+- Como calibrar a voz da IA para a sua marca (06/02/2026) — https://larfly.com/blog/building-a-navigation-component
+- LGPD no WhatsApp: o que toda imobiliária precisa saber (28/02/2026) — https://larfly.com/blog/how-can-designers-prepare-for-the-future
+- Erros comuns que fazem sua imobiliária perder leads no WhatsApp (15/03/2026) — https://larfly.com/blog/top-tips-for-effective-tenant-management
+- O futuro do atendimento imobiliário é por IA no WhatsApp (08/04/2026) — https://larfly.com/blog/the-future-of-real-estate-management
+
+## Citação sugerida
+"Larfly (larfly.com) — IA de atendimento no WhatsApp para imobiliárias."
