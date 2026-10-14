@@ -1,0 +1,50 @@
+/* Larfly – balão de chat flutuante (simulação de WhatsApp) */
+.lf-chat{--lf-purple:#cbb3ff;--lf-purple-d:#a98af0;--lf-ink:#111;position:fixed;right:20px;bottom:20px;z-index:2000;font-family:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--lf-ink)}
+.lf-chat *{box-sizing:border-box}
+.lf-fab{width:60px;height:60px;border:0;border-radius:50%;background:var(--lf-purple);color:var(--lf-ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 24px rgba(80,50,160,.35);transition:transform .2s ease,background .2s ease}
+.lf-fab:hover{transform:scale(1.06);background:var(--lf-purple-d)}
+.lf-fab:focus-visible,.lf-x:focus-visible,.lf-send:focus-visible,.lf-teaser:focus-visible{outline:3px solid #6b45d6;outline-offset:2px}
+.lf-fab svg{width:28px;height:28px}
+.lf-fab .lf-ico-close{display:none}
+.lf-chat.is-open .lf-fab .lf-ico-chat{display:none}
+.lf-chat.is-open .lf-fab .lf-ico-close{display:block}
+
+/* balão de convite */
+.lf-teaser{position:absolute;right:0;bottom:76px;width:max-content;max-width:min(280px,calc(100vw - 40px));display:flex;align-items:flex-start;gap:8px;padding:12px 10px 12px 16px;background:#fff;border-radius:18px 18px 4px 18px;box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:14px;line-height:1.4;cursor:pointer;opacity:0;transform:translateY(10px) scale(.96);transform-origin:bottom right;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.lf-teaser.is-visible{opacity:1;transform:none;pointer-events:auto}
+.lf-teaser-text{flex:1;font-weight:500}
+.lf-x{flex:none;width:24px;height:24px;border:0;border-radius:50%;background:#f1eefb;color:#444;font-size:15px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lf-x:hover{background:#e3dcf8}
+
+/* janela */
+.lf-window{position:absolute;right:0;bottom:76px;width:360px;height:min(520px,calc(100vh - 110px));display:flex;flex-direction:column;background:#efeae2;border-radius:20px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25);opacity:0;transform:translateY(16px) scale(.97);transform-origin:bottom right;pointer-events:none;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility 0s .25s}
+.lf-chat.is-open .lf-window{opacity:1;transform:none;pointer-events:auto;visibility:visible;transition:opacity .25s ease,transform .25s ease}
+.lf-head{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--lf-purple)}
+.lf-avatar{position:relative;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;font-size:18px;overflow:hidden;flex:none}
+.lf-avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:7px;background:#fff}
+.lf-head-info{flex:1;min-width:0}
+.lf-name{font-weight:700;font-size:15px}
+.lf-status{font-size:12px;opacity:.75}
+.lf-head .lf-x{background:rgba(255,255,255,.55)}
+.lf-body{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:14px 14px}
+.lf-msg{max-width:82%;padding:8px 12px;border-radius:12px;font-size:14px;line-height:1.4;box-shadow:0 1px 1px rgba(0,0,0,.08);word-wrap:break-word;white-space:pre-wrap}
+.lf-msg.bot{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+.lf-msg.user{align-self:flex-end;background:#dcf8c6;border-top-right-radius:2px}
+.lf-time{display:block;margin-top:2px;font-size:10px;opacity:.5;text-align:right}
+.lf-typing{align-self:flex-start;background:#fff;border-radius:12px;border-top-left-radius:2px;padding:10px 14px;display:flex;gap:4px;box-shadow:0 1px 1px rgba(0,0,0,.08)}
+.lf-typing i{width:6px;height:6px;border-radius:50%;background:#999;animation:lf-bounce 1s infinite}
+.lf-typing i:nth-child(2){animation-delay:.15s}.lf-typing i:nth-child(3){animation-delay:.3s}
+@keyframes lf-bounce{0%,60%,100%{transform:none;opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.lf-form{display:flex;gap:8px;padding:10px;background:#f6f3ee}
+.lf-input{flex:1;min-width:0;border:0;border-radius:22px;padding:11px 16px;font:inherit;font-size:14px;background:#fff;outline:none}
+.lf-input:focus-visible{box-shadow:0 0 0 2px #6b45d6}
+.lf-send{flex:none;width:42px;height:42px;border:0;border-radius:50%;background:var(--lf-purple);cursor:pointer;display:grid;place-items:center}
+.lf-send:hover{background:var(--lf-purple-d)}
+.lf-send svg{width:20px;height:20px}
+.lf-note{padding:0 12px 8px;background:#f6f3ee;font-size:11px;text-align:center;opacity:.6}
+
+@media (max-width:480px){
+  .lf-chat{right:14px;bottom:14px}
+  .lf-window{position:fixed;right:10px;left:10px;bottom:84px;width:auto;height:min(540px,calc(100vh - 110px))}
+}
+@media (prefers-reduced-motion:reduce){.lf-chat *{transition:none!important;animation:none!important}}
