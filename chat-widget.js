@@ -6,7 +6,6 @@
   if (window.__larflyChat) return;
   window.__larflyChat = true;
 
-  var TEASER_DELAY = 5000;
   var STORE_KEY = "larfly-chat-teaser-dismissed";
   var cfg = (window.LarflyChat = window.LarflyChat || {});
 
@@ -52,7 +51,7 @@
     var q = function (s) { return root.querySelector(s); };
     var fab = q(".lf-fab"), teaser = q(".lf-teaser"), win = q(".lf-window"),
         body = q(".lf-body"), form = q(".lf-form"), input = q(".lf-input");
-    var seeded = false, busy = false, timer;
+    var seeded = false, busy = false, teaserObserver;
 
     function addMsg(from, text) {
       var m = el("div", "lf-msg " + from);
@@ -72,7 +71,7 @@
       SCRIPT.forEach(function (m) { addMsg(m.from, m.text); });
     }
     function hideTeaser(remember) {
-      clearTimeout(timer);
+      if (teaserObserver) teaserObserver.disconnect();
       teaser.classList.remove("is-visible");
       if (remember) stored(true);
     }
@@ -85,6 +84,15 @@
     }
 
     fab.addEventListener("click", function () { setOpen(!root.classList.contains("is-open")); });
+    document.addEventListener("click", function (e) {
+      var button = e.target.closest("a, button");
+      if (!button || button.closest(".lf-chat")) return;
+      var label = (button.innerText || button.textContent || "").replace(/\s+/g, " ").trim();
+      if (label !== "Testar gratuitamente") return;
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(true);
+    }, true);
     q(".lf-close").addEventListener("click", function () { setOpen(false); fab.focus(); });
     teaser.addEventListener("click", function () { setOpen(true); });
     q(".lf-teaser .lf-x").addEventListener("click", function (e) { e.stopPropagation(); hideTeaser(true); });
@@ -107,9 +115,26 @@
         .then(function (r) { typing(false); addMsg("bot", r); busy = false; });
     });
 
-    if (!stored()) timer = setTimeout(function () {
-      if (!root.classList.contains("is-open")) teaser.classList.add("is-visible");
-    }, TEASER_DELAY);
+    function observeAirbnbSection() {
+      var airbnbSection = document.getElementById("airbnb");
+      if (!airbnbSection) return false;
+      if (!("IntersectionObserver" in window)) return true;
+      teaserObserver = new IntersectionObserver(function (entries) {
+        if (entries.some(function (entry) { return entry.isIntersecting; })) {
+          if (!root.classList.contains("is-open")) teaser.classList.add("is-visible");
+          teaserObserver.disconnect();
+        }
+      }, { threshold: 0.2 });
+      teaserObserver.observe(airbnbSection);
+      return true;
+    }
+
+    if (!stored() && !observeAirbnbSection()) {
+      var sectionObserver = new MutationObserver(function () {
+        if (observeAirbnbSection()) sectionObserver.disconnect();
+      });
+      sectionObserver.observe(document.body, { childList: true, subtree: true });
+    }
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", build);
