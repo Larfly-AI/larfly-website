@@ -1,0 +1,14 @@
+# Dependencies and generated Next.js output
+/node_modules
+/.next
+/out
+/build
+
+# Local machine files and private MCP configuration
+.DS_Store
+.mcp.json
+
+# Local environment files
+.env
+.env.*
+!.env.example
