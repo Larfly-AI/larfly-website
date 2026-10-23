@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { RouteShell } from "@/components/RouteShell";
+import { RouteShell } from "@/components/layout";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://larfly.com"),

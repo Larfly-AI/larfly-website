@@ -1,0 +1,9 @@
+export { AirbnbSection } from "./AirbnbSection";
+export { Blog } from "./Blog";
+export { FAQ } from "./FAQ";
+export { FinalCTA } from "./FinalCTA";
+export { Hero } from "./Hero";
+export { Pricing } from "./PricingSection";
+export { Services } from "./Services";
+export { Testimonials } from "./Testimonials";
+export { WhyUs } from "./WhyUs";

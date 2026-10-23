@@ -1,4 +1,4 @@
-import { FigmaHomepage } from "@/components/FigmaHomepage";
+import { FigmaHomepage } from "@/components/homepage/FigmaHomepage";
 
 const jsonLd = {
   "@context": "https://schema.org",
