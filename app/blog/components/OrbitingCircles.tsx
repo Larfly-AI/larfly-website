@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./orbiting-circles-02.module.css";
+import styles from "./OrbitingCircles.module.css";
 
 const orbits = [
   { radius: "inner", duration: 18, icons: [{ kind: "bulb", label: "Ideias" , angle: -60 }, { kind: "phone", label: "Celular", angle: 0 }, { kind: "chat", label: "Conversas", angle: 60 }] },

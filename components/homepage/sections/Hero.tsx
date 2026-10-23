@@ -1,0 +1,7 @@
+import { PrimaryLink } from "@/components/ui/PrimaryLink";
+
+const asset = (name: string) => `/images/${name}`;
+
+export function Hero() {
+ return <section className="fh-hero" id="hero"><div className="fh-hero-copy"><h1>Seu WhatsApp nunca mais para de responder.</h1><p>A Larfly conecta ao WhatsApp da sua imobiliária e responde cada lead em segundos, com a voz e as regras que você define. Você só entra na conversa quando quiser.</p><PrimaryLink>Testar gratuitamente</PrimaryLink><a className="fh-start" href="#recursos">Comece por aqui <span>→</span></a></div><div className="fh-hero-visual"><div className="fh-phone fh-phone-desktop"><img src={asset("figma-hero-whatsapp.png")} alt="Conversa de atendimento pelo WhatsApp"/><span>Atendimento<br/>automático 24/7</span></div><div className="fh-interior"><img className="fh-interior-img" src={asset("figma-hero-interior.png")} alt="Interior de um imóvel moderno"/><span className="fh-property">+3K Imóveis <i>↗</i></span><div className="fh-social"><div className="fh-avatars"><img src={asset("figma-avatar-1.png")} alt=""/><img src={asset("figma-avatar-2.png")} alt=""/><img src={asset("figma-avatar-3.png")} alt=""/><img src={asset("figma-avatar-4.png")} alt=""/></div><div className="fh-social-copy"><b>1,5K+</b><span>Já utilizam a<br/>Larfly e recomendam</span></div></div></div><div className="fh-phone fh-phone-mobile"><img src={asset("figma-hero-whatsapp.png")} alt="Conversa de atendimento pelo WhatsApp"/><span>Atendimento<br/>automático 24/7</span></div></div></section>
+}

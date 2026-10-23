@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import MobileMockup from "@/components/ui/great-ui-mobile-mockup";
+import MobileMockup from "@/components/layout/great-ui-mobile-mockup";
 import "./ChatWidget.css";
 
 const demoMessages = [
